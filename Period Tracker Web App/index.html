@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lunara — Understand Your Cycle</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            <span class="logo-mark">✦</span>
+            LUNARA
+        </a>
+
+        <div class="nav-actions">
+
+            <button
+                class="icon-btn"
+                id="themeToggle"
+                aria-label="Toggle dark mode"
+            >
+                🌙
+            </button>
+
+            <button
+                class="primary-btn"
+                id="startButton"
+            >
+                Start Tracking
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="eyebrow">
+                    ✦ Your cycle, beautifully understood
+                </div>
+
+                <h1>
+                    Understand your
+                    <span>cycle.</span>
+                    Understand yourself.
+                </h1>
+
+                <p>
+                    Lunara helps you track your menstrual cycle,
+                    understand your body's patterns and build a
+                    clearer picture of your monthly wellness.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <button
+                        class="primary-btn"
+                        id="heroStart"
+                    >
+                        Start Tracking →
+                    </button>
+
+                    <a
+                        href="#features"
+                        class="secondary-btn"
+                    >
+                        Explore Lunara
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= CYCLE PREVIEW ================= -->
+
+            <div class="hero-visual">
+
+                <div class="glow-orb"></div>
+
+                <div class="cycle-preview">
+
+                    <div class="preview-header">
+
+                        <div>
+                            <small>Your cycle</small>
+
+                            <h3>
+                                August 2026
+                            </h3>
+                        </div>
+
+                        <span class="status-pill">
+                            Tracking
+                        </span>
+
+                    </div>
+
+
+                    <div class="cycle-ring">
+
+                        <div class="ring-content">
+
+                            <strong id="previewDay">
+                                14
+                            </strong>
+
+                            <span>
+                                cycle day
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="preview-stats">
+
+                        <div class="mini-stat">
+
+                            <small>
+                                Next period
+                            </small>
+
+                            <strong id="previewPeriod">
+                                Sep 2
+                            </strong>
+
+                        </div>
+
+                        <div class="mini-stat">
+
+                            <small>
+                                Cycle length
+                            </small>
+
+                            <strong>
+                                28 days
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FEATURES ================= -->
+
+        <section
+            class="features"
+            id="features"
+        >
+
+            <div class="section-heading">
+
+                <span class="eyebrow">
+                    WHY LUNARA
+                </span>
+
+                <h2>
+                    Your cycle,
+                    <span>your story.</span>
+                </h2>
+
+                <p>
+                    Everything you need to understand and track
+                    your cycle in one calm, beautiful space.
+                </p>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        🩸
+                    </div>
+
+                    <h3>
+                        Track your period
+                    </h3>
+
+                    <p>
+                        Record your period and receive
+                        personalized cycle estimates.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        🌸
+                    </div>
+
+                    <h3>
+                        Understand your phases
+                    </h3>
+
+                    <p>
+                        See where you are in your cycle and
+                        understand what each phase means.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        📊
+                    </div>
+
+                    <h3>
+                        Discover patterns
+                    </h3>
+
+                    <p>
+                        Track moods and symptoms and discover
+                        patterns over time.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= ONBOARDING MODAL ================= -->
+
+    <div
+        class="modal-overlay"
+        id="onboardingModal"
+    >
+
+        <div class="modal">
+
+            <button
+                class="close-modal"
+                id="closeModal"
+            >
+                ×
+            </button>
+
+            <div class="modal-heading">
+
+                <span class="eyebrow">
+                    LET'S GET STARTED
+                </span>
+
+                <h2>
+                    Tell us about your cycle.
+                </h2>
+
+                <p>
+                    We'll use this information to create
+                    your personalized cycle tracker.
+                </p>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="periodDate">
+                    When did your last period start?
+                </label>
+
+                <input
+                    type="date"
+                    id="periodDate"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="cycleLength">
+                    Average cycle length
+                </label>
+
+                <input
+                    type="number"
+                    id="cycleLength"
+                    value="28"
+                    min="21"
+                    max="45"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="periodLength">
+                    Average period length
+                </label>
+
+                <input
+                    type="number"
+                    id="periodLength"
+                    value="5"
+                    min="2"
+                    max="10"
+                >
+
+            </div>
+
+
+            <button
+                class="primary-btn full-width"
+                id="createCycle"
+            >
+                Create My Cycle →
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div>
+            © 2026 <strong>Lunara</strong>
+        </div>
+
+        <div>
+            Cycle estimates are for tracking purposes only
+            and are not medical advice.
+        </div>
+
+    </footer>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>

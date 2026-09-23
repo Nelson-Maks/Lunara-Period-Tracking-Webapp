@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Lunara — Dashboard</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+            <span class="logo-mark">✦</span>
+            LUNARA
+        </a>
+
+
+        <div class="nav-actions">
+
+            <button
+                class="icon-btn"
+                id="themeToggle"
+            >
+                🌙
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= DASHBOARD ================= -->
+
+    <main class="dashboard">
+
+        <header class="dashboard-header">
+
+            <div>
+
+                <span class="eyebrow">
+                    YOUR WELLNESS SPACE
+                </span>
+
+                <h1>
+                    Your cycle at a glance.
+                </h1>
+
+                <p>
+                    Here's what your body is telling you today.
+                </p>
+
+            </div>
+
+
+            <button
+                class="primary-btn"
+                id="logToday"
+            >
+                + Log Today
+            </button>
+
+        </header>
+
+
+        <!-- ================= DASHBOARD GRID ================= -->
+
+        <div class="dashboard-grid">
+
+
+            <!-- CURRENT CYCLE -->
+
+            <section class="card cycle-card-large">
+
+                <div class="card-header">
+
+                    <h2>
+                        Current Cycle
+                    </h2>
+
+                    <span id="currentMonth">
+                        August 2026
+                    </span>
+
+                </div>
+
+
+                <div class="cycle-dashboard">
+
+                    <div class="big-cycle-ring">
+
+                        <div class="big-ring-content">
+
+                            <strong id="cycleDay">
+                                14
+                            </strong>
+
+                            <span>
+                                cycle day
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="phase-info">
+
+                        <span class="phase-tag">
+                            CURRENT PHASE
+                        </span>
+
+                        <h2 id="phaseName">
+                            Follicular Phase
+                        </h2>
+
+                        <p id="phaseDescription">
+                            Your body is preparing for ovulation.
+                            Estrogen typically begins to rise
+                            during this phase.
+                        </p>
+
+                        <strong id="nextPeriod">
+                            Next period in 14 days
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- INSIGHT -->
+
+            <section class="card insight-card">
+
+                <div class="card-header">
+
+                    <h2>
+                        Today's Insight
+                    </h2>
+
+                    <span>
+                        Personalized
+                    </span>
+
+                </div>
+
+
+                <div class="insight-box">
+
+                    <div class="insight-icon">
+                        🌱
+                    </div>
+
+                    <div>
+
+                        <h3 id="insightTitle">
+                            A fresh phase begins.
+                        </h3>
+
+                        <p id="insightText">
+                            You're currently in your
+                            follicular phase.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= CALENDAR ================= -->
+
+            <section class="card calendar-card">
+
+                <div class="calendar-header">
+
+                    <h2 id="calendarMonth">
+                        August 2026
+                    </h2>
+
+
+                    <div class="calendar-controls">
+
+                        <button id="previousMonth">
+                            ←
+                        </button>
+
+                        <button id="nextMonth">
+                            →
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="weekdays">
+
+                    <span>Sun</span>
+                    <span>Mon</span>
+                    <span>Tue</span>
+                    <span>Wed</span>
+                    <span>Thu</span>
+                    <span>Fri</span>
+                    <span>Sat</span>
+
+                </div>
+
+
+                <div
+                    class="calendar-grid"
+                    id="calendarGrid"
+                ></div>
+
+
+                <div class="calendar-legend">
+
+                    <span>
+                        <i class="legend period"></i>
+                        Period
+                    </span>
+
+                    <span>
+                        <i class="legend fertile"></i>
+                        Fertile
+                    </span>
+
+                    <span>
+                        <i class="legend ovulation"></i>
+                        Ovulation
+                    </span>
+
+                </div>
+
+            </section>
+
+            <!-- ================= DATE DETAIL PANEL ================= -->
+
+            <section class="card date-detail-card" id="dateDetailCard">
+
+                <div class="date-detail-header">
+
+                    <div>
+                        <span class="eyebrow">
+                            DAILY DETAILS
+                        </span>
+
+                        <h2 id="detailDate">
+                            August 18
+                        </h2>
+
+                        <p id="detailPhase">
+                            Follicular Phase
+                        </p>
+                    </div>
+
+                    <button
+                        class="close-detail"
+                        id="closeDetail"
+                        aria-label="Close date details"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+
+                <!-- Cycle information -->
+
+                <div class="detail-cycle">
+
+                    <div class="detail-cycle-icon">
+                        🌙
+                    </div>
+
+                    <div>
+
+                        <span>
+                            CYCLE DAY
+                        </span>
+
+                        <strong id="detailCycleDay">
+                            Day 14
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Logged information -->
+
+                <div class="detail-section">
+
+                    <div class="detail-label">
+                        <span>😊</span>
+                        Mood
+                    </div>
+
+                    <div
+                        class="detail-value"
+                        id="detailMood"
+                    >
+                        Not logged
+                    </div>
+
+                </div>
+
+
+                <div class="detail-section">
+
+                    <div class="detail-label">
+                        <span>🩸</span>
+                        Flow
+                    </div>
+
+                    <div
+                        class="detail-value"
+                        id="detailFlow"
+                    >
+                        Not logged
+                    </div>
+
+                </div>
+
+
+                <div class="detail-section">
+
+                    <div class="detail-label">
+                        <span>✨</span>
+                        Symptoms
+                    </div>
+
+                    <div
+                        class="detail-symptoms"
+                        id="detailSymptoms"
+                    >
+                        <span class="empty-detail">
+                            No symptoms logged
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="detail-footer">
+
+                    <button
+                        class="secondary-btn"
+                        id="editSelectedDate"
+                    >
+                        Edit this day
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= STATISTICS ================= -->
+
+            <section class="card statistics-card">
+
+                <div class="card-header">
+
+                    <h2>
+                        Statistics
+                    </h2>
+
+                    <span>
+                        Overview
+                    </span>
+
+                </div>
+
+
+                <div class="statistics">
+
+                    <div class="stat-row">
+
+                        <span>
+                            Average cycle
+                        </span>
+
+                        <strong id="averageCycle">
+                            28 days
+                        </strong>
+
+                    </div>
+
+
+                    <div class="stat-row">
+
+                        <span>
+                            Period length
+                        </span>
+
+                        <strong id="averagePeriod">
+                            5 days
+                        </strong>
+
+                    </div>
+
+
+                    <div class="stat-row">
+
+                        <span>
+                            Cycles tracked
+                        </span>
+
+                        <strong id="cyclesTracked">
+                            1
+                        </strong>
+
+                    </div>
+
+
+                    <div class="stat-row">
+
+                        <span>
+                            Symptoms logged
+                        </span>
+
+                        <strong id="symptomsLogged">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= ASK LUNARA ================= -->
+            <section class="card ask-lunara-card">
+                <div class="card-header">
+                    <div>
+                        <h2>Ask Lunara</h2>
+                        <span>Your personal wellness assistant</span>
+                    </div>
+                    <span class="assistant-badge">✦ Assistant</span>
+                </div>
+
+                <div class="lunara-chat" id="lunaraChat">
+                    <div class="chat-message assistant-message">
+                        <div class="chat-avatar">✦</div>
+                        <div class="chat-bubble">
+                            <strong>Hi, I'm Lunara ✨</strong>
+                            <p>Ask me about your cycle, common period symptoms, or simple self-care tips.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="suggested-questions">
+                    <button class="suggestion" data-question="What can I do about cramps?">Cramps</button>
+                    <button class="suggestion" data-question="Why am I feeling bloated?">Bloating</button>
+                    <button class="suggestion" data-question="How can I take care of myself during my period?">Self-care</button>
+                </div>
+
+                <form class="ask-form" id="askLunaraForm">
+                    <input id="lunaraQuestion" type="text" placeholder="Ask Lunara something..." autocomplete="off" aria-label="Ask Lunara a question">
+                    <button class="primary-btn" type="submit">Ask ✦</button>
+                </form>
+                <p class="assistant-disclaimer">Lunara provides general wellness information, not medical diagnosis or treatment.</p>
+            </section>
+
+            <!-- ================= DAILY LOG ================= -->
+
+            <section class="card daily-log">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            How are you feeling?
+                        </h2>
+
+                        <span id="selectedDate">
+                            Log your wellness today
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="log-grid">
+
+
+                    <!-- MOOD -->
+
+                    <div class="log-section">
+
+                        <h3>
+                            Mood
+                        </h3>
+
+                        <div class="choice-grid">
+
+                            <button
+                                class="choice"
+                                data-type="mood"
+                                data-value="Happy"
+                            >
+                                😊 Happy
+                            </button>
+
+                            <button
+                                class="choice"
+                                data-type="mood"
+                                data-value="Good"
+                            >
+                                🙂 Good
+                            </button>
+
+                            <button
+                                class="choice"
+                                data-type="mood"
+                                data-value="Okay"
+                            >
+                                😐 Okay
+                            </button>
+
+                            <button
+                                class="choice"
+                                data-type="mood"
+                                data-value="Low"
+                            >
+                                😔 Low
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FLOW -->
+
+                    <div class="log-section">
+
+                        <h3>
+                            Flow
+                        </h3>
+
+                        <div class="choice-grid">
+
+                            <button
+                                class="choice"
+                                data-type="flow"
+                                data-value="Light"
+                            >
+                                Light
+                            </button>
+
+                            <button
+                                class="choice"
+                                data-type="flow"
+                                data-value="Medium"
+                            >
+                                Medium
+                            </button>
+
+                            <button
+                                class="choice"
+                                data-type="flow"
+                                data-value="Heavy"
+                            >
+                                Heavy
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SYMPTOMS -->
+
+                    <div class="log-section">
+
+                        <h3>
+                            Symptoms
+                        </h3>
+
+                        <div class="choice-grid">
+
+                            <button
+                                class="choice"
+                                data-type="symptom"
+                                data-value="Cramps"
+                            >
+                                Cramps
+                            </button>
+
+                            <button
+                                class="choice"
+                                data-type="symptom"
+                                data-value="Headache"
+                            >
+                                Headache
+                            </button>
+
+                            <button
+                                class="choice"
+                                data-type="symptom"
+                                data-value="Bloating"
+                            >
+                                Bloating
+                            </button>
+
+                            <button
+                                class="choice"
+                                data-type="symptom"
+                                data-value="Fatigue"
+                            >
+                                Fatigue
+                            </button>
+
+                            <button
+                                class="choice"
+                                data-type="symptom"
+                                data-value="Acne"
+                            >
+                                Acne
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="primary-btn"
+                    id="saveLog"
+                >
+                    Save Today's Log
+                </button>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= TOAST ================= -->
+
+    <div
+        class="toast"
+        id="toast"
+    >
+        Saved successfully ✓
+    </div>
+
+
+    <footer>
+
+        <div>
+            © 2026 <strong>Lunara</strong>
+        </div>
+
+        <div>
+            Cycle estimates are for tracking purposes only
+            and are not medical advice.
+        </div>
+
+    </footer>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

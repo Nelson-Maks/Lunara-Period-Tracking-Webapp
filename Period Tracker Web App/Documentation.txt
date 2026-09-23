@@ -1,0 +1,35 @@
+Calendar
+   │
+   │ Click August 12
+   ▼
+┌─────────────────────────┐
+│ DAILY DETAILS           │
+│ August 12, 2026         │
+│ Follicular Phase        │
+│                         │
+│ 😊 Mood       Happy     │
+│ 🩸 Flow       Light     │
+│ ✨ Symptoms             │
+│    Cramps               │
+│    Fatigue              │
+│                         │
+│ [ Edit this day ]       │
+└─────────────────────────┘
+             │
+             │ click
+             ▼
+┌─────────────────────────┐
+│ HOW ARE YOU FEELING?    │
+│                         │
+│ Mood                    │
+│ [😊 Happy] [🙂 Good]   │
+│                         │
+│ Flow                    │
+│ [Light] [Medium]        │
+│                         │
+│ Symptoms                │
+│ [Cramps] [Fatigue]      │
+│                         │
+│ [ Save Today's Log ]    │
+└─────────────────────────┘
+
